@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:
+        "Roboto",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+}
+
+/* Header */
+.jps-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: white;
+}
+
+/* Logo */
+.jps-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.jps-logo-icon {
+    background-color: #ffc107;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+}
+
+.jps-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.jps-logo-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.jps-logo-tagline {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Navigation */
+.jps-nav {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.jps-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.jps-nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.jps-nav-links li a.active {
+    color: #ffc107;
+}
+
+.jps-nav-links li a:hover {
+    color: #ffc107;
+}
+
+/* Phone number */
+.jps-phone {
+    margin-right: 2rem;
+    white-space: nowrap;
+}
+
+.jps-phone span {
+    font-size: 0.9rem;
+}
+
+.jps-phone a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Social icons */
+.jps-socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.jps-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.jps-socials img {
+    height: 1.2rem;
+    width: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.jps-socials a:hover img {
+    opacity: 1;
+}
+
+/* Media query for iPad size (992px) */
+@media (max-width: 992px) {
+    .jps-header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .jps-logo {
+        flex: 0 0 auto;
+    }
+
+    .jps-phone {
+        order: 2;
+        margin-left: auto;
+        margin-right: 2rem;
+        flex: 0 0 auto;
+        text-align: right;
+    }
+
+    .jps-phone span,
+    .jps-phone a {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    .jps-phone span {
+        color: #ffc107;
+    }
+
+    .jps-socials {
+        order: 3;
+        flex: 0 0 auto;
+    }
+
+    .jps-nav {
+        order: 4;
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+
+    .jps-nav-links {
+        justify-content: space-between;
+    }
+    .jps-socials img {
+        height: 1.5rem;
+
+        width: 1.5rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .jps-phone {
+        order: 3;
+        margin: 1rem 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .jps-socials {
+        order: 2;
+    }
+
+    .jps-nav {
+        order: 4;
+    }
+
+    .jps-nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.mobile-phone {
+    display: none;
+    padding: 1.5rem 0;
+    border-top: 1px solid #eee;
+    margin-top: 1.5rem;
+}
+
+.mobile-socials {
+    display: none;
+    justify-content: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #eee;
+}
+
+/* Media query for small screens (440px and below) */
+@media (max-width: 440px) {
+    .jps-header {
+        padding: 1rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+        order: 3;
+    }
+
+    .jps-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 999;
+        padding: 4rem 1rem 1rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .jps-nav.active {
+        right: 0;
+    }
+
+    .jps-nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .jps-nav-links li {
+        width: 100%;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .jps-nav-links li a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+
+    /* Hamburger animation for open state */
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hide desktop elements, show mobile versions */
+    .jps-phone {
+        display: none;
+    }
+
+    .desktop-socials {
+        display: none;
+    }
+
+    .mobile-phone {
+        display: block;
+        text-align: center;
+    }
+
+    .mobile-phone a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .mobile-socials {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .mobile-socials img {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+
+    /* Adjust logo section */
+    .jps-logo {
+        flex: 1;
+    }
+
+    .jps-logo-name {
+        font-size: 1.2rem;
+    }
+}
