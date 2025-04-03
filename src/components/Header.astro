@@ -17,26 +17,7 @@ import "../styles/styles.css";
         </div>
     </div>
 
-    <div class="jps-phone">
-        <span>Call us: <a href="tel:936-111-1111">936-111-1111</a></span>
-    </div>
-
-    <div class="jps-socials desktop-socials">
-        <a href="https://facebook.com" aria-label="Facebook">
-            <img src={facebookSVG.src} alt="Facebook" />
-        </a>
-        <a href="https://google.com" aria-label="Google">
-            <img src={googleSVG.src} alt="Google" />
-        </a>
-    </div>
-
-    <button class="hamburger-menu" aria-label="Toggle menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-    </button>
-
-    <nav class="jps-nav">
+    <nav class="jps-nav" aria-label="Main navigation">
         <ul class="jps-nav-links">
             <li><a href="" class="active">Home</a></li>
             <li><a href="">Pages</a></li>
@@ -46,7 +27,14 @@ import "../styles/styles.css";
         </ul>
 
         <div class="mobile-phone">
-            <span>Call us: <a href="tel:936-111-1111">936-111-1111</a></span>
+            <span>
+                Call us: <a
+                    href="tel:936-111-1111"
+                    aria-label="Call us at 936-111-1111"
+                >
+                    936-111-1111
+                </a>
+            </span>
         </div>
 
         <div class="jps-socials mobile-socials">
@@ -58,4 +46,26 @@ import "../styles/styles.css";
             </a>
         </div>
     </nav>
+    <div class="jps-phone">
+        <span>Call us: <a href="tel:936-111-1111">936-111-1111</a></span>
+    </div>
+    <div class="jps-socials desktop-socials">
+        <a href="https://facebook.com" aria-label="Facebook">
+            <img src={facebookSVG.src} alt="Facebook" />
+        </a>
+        <a href="https://google.com" aria-label="Google">
+            <img src={googleSVG.src} alt="Google" />
+        </a>
+    </div>
+
+    <button
+        class="hamburger-menu"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+    >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
 </header>
