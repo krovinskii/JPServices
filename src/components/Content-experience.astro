@@ -1,26 +1,39 @@
-<section class="content-exp">
-    <div class="content-exp-text-box">
-        <h3>20+ Years of Experience</h3>
-        <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-            odit aut fugit, sed quia conse quuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam qui dolorem ipsum
-            quia dolor sit amet, consectetur, adipisci velit.
-        </p>
-        <div class="content-exp-icon-container">
-            <img src="" />
-            <p></p>
-        </div>
-        <div class="content-exp-icon-container">
-            <img src="" />
-            <p></p>
-        </div>
-        <div class="content-exp-icon-container">
-            <img src="" />
-            <p></p>
+---
+import ContentPic from "../assets/content-exp.jpg";
+import Leaf from "../assets/leaf.svg";
+import Fence from "../assets/fence.svg";
+import Hammer from "../assets/hammer.svg";
+---
+
+<section class="content-exp-section">
+    <div class="content-exp-section-container">
+        <div class="content-exp-text-box">
+            <h3>20+ years of Experience</h3>
+            <p>
+                With decades of expertise in decking, fencing, landscaping, and
+                patios, we bring a wealth of knowledge and skill to every
+                project. Serving Navasota, TX, and surrounding areas, our team
+                is committed to providing high-quality outdoor solutions
+                tailored to your unique vision. Whether you’re looking to
+                upgrade your backyard with a custom deck, add a new fence, or
+                create a stunning patio, we ensure lasting results that enhance
+                the beauty and functionality of your space.
+            </p>
+            <div class="content-exp-icon-container-container">
+                <div class="content-exp-icon-container">
+                    <img src={Leaf.src} />
+                    <p>Landscaping</p>
+                </div>
+                <div class="content-exp-icon-container">
+                    <img src={Fence.src} />
+                    <p>Fencing - All Types!</p>
+                </div>
+                <div class="content-exp-icon-container">
+                    <img src={Hammer.src} />
+                    <p>Patio Covers</p>
+                </div>
+            </div>
         </div>
     </div>
-    <img src="" />
+    <img class="content-exp-main-img" src={ContentPic.src} />
 </section>

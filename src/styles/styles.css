@@ -537,3 +537,45 @@
 /*
 ==================================================================================================================CONTENT-EXPERIENCE============================================================================================================
 */
+.content-exp-section {
+    display: flex;
+    max-width: 100%;
+    padding: 5rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.content-exp-section-container {
+    max-width: 80rem;
+}
+.content-exp-text-box {
+}
+.content-exp-text-box h3 {
+    font-size: 4rem;
+    font-weight: 500;
+    max-width: 25rem;
+    line-height: 4rem;
+}
+.content-exp-text-box p {
+    max-width: 50rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    color: #4d4d4d;
+    font-size: 1.2rem;
+}
+.content-exp-main-img {
+    width: 33%;
+}
+.content-exp-icon-container-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+.content-exp-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.content-exp-icon-container img {
+    width: 4rem;
+}
