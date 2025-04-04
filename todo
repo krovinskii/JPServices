@@ -1,7 +1,22 @@
-
 Hero----------------------------------------------
+
 1. There are missing links on the Hero for contact form
-2.Hero needs work to look more put together
+   2.Hero needs work to look more put together
+   3. Lets put black overlay on entire bg and lower opacity,
 
 Experience---------------------------------------
+
 1. Mobile
+
+Recent Works-------------------------------------
+
+1. Masonry effect needs entire thing complete custom JS
+   -The most import pics will be first in the all tab, with good alt text for crawling seo
+   --So on load, only 4 images should be shown.
+   ---Then once user clicks another tab the images will hide, new ones pertaining to that tab will unhide and fill the same exact space as before.
+
+2. IT is not as wide as previous section. Debug
+3. On mobile, the images should each be listed like
+   Tab
+   <-IMG->
+   arrows represent sliding effect for user to swipe with finger to move to next images in section

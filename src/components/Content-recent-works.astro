@@ -11,44 +11,134 @@ import Pergola1 from "../assets/pergola1.webp";
 import Patio1 from "../assets/patiocover1.jpeg";
 import Patio2 from "../assets/patiocover2.jpeg";
 import Patio3 from "../assets/patiocover3.jpeg";
-import Landscape1 from "../assets/landscape1.jpg";
+import Landscape1 from "../assets/landscape1.webp";
 import Landscape2 from "../assets/landscape2.jpeg";
 import Landscape3 from "../assets/landscape3.jpeg";
 import Landscape4 from "../assets/landscape4.jpg";
 ---
 
-<script src="../js/detectOrientation.js"></script>
 <script src="../js/persistantClick.js"></script>
+<script src="../js/landingGallery.js"></script>
 <section class="content-recent-works">
     <div class="content-recent-works-container">
         <h3>Recent Projects</h3>
         <div class="content-recent-works-nav-img-container">
             <div class="recent-works-navbar">
                 <ul>
-                    <li class="rw-all"><button>All</button></li>
-                    <li class="rw-fence"><button>Fences</button></li>
-                    <li class="rw-deck"><button>Decks</button></li>
-                    <li class="rw-patios"><button>Patios</button></li>
-                    <li class="rw-landscaping"><button>Landscaping</button></li>
-                    <li class="rw-handyman"><button>Handyman</button></li>
+                    <li id="btn-all" class="rw-all">
+                        <button class="active">All</button>
+                    </li>
+                    <li id="btn-fence" class="rw-fence">
+                        <button>Fences</button>
+                    </li>
+                    <li id="btn-deck" class="rw-deck">
+                        <button>Decks</button>
+                    </li>
+                    <li id="btn-patios" class="rw-patios">
+                        <button>Patios</button>
+                    </li>
+                    <li id="btn-landscaping" class="rw-landscaping">
+                        <button>Landscaping</button>
+                    </li>
                 </ul>
             </div>
             <div class="rw-photo-container">
-                <img src={FenceWork.src} alt="Fence Work" />
-                <img src={Fence2.src} alt="Fence 2" />
-                <img src={Fence3.src} alt="Fence 3" />
-                <img src={Fence4.src} alt="Fence 4" />
-                <img src={Deck2.src} alt="Deck 2" />
-                <img src={Deck3.src} alt="Deck 3" />
-                <img src={Deck4.src} alt="Deck 4" />
-                <img src={Pergola1.src} alt="Pergola 1" />
-                <img src={Patio1.src} alt="Patio 1" />
-                <img src={Patio2.src} alt="Patio 2" />
-                <img src={Patio3.src} alt="Patio 3" />
-                <img src={Landscape1.src} alt="Landscape 1" />
-                <img src={Landscape2.src} alt="Landscape 2" />
-                <img src={Landscape3.src} alt="Landscape 3" />
-                <img src={Landscape4.src} alt="Landscape 4" />
+                <img
+                    src={FenceWork.src}
+                    alt="Fence Work"
+                    class="rw-fence-img"
+                    id="fence-img-1"
+                />
+                <img
+                    src={Fence2.src}
+                    alt="Fence 2"
+                    class="rw-fence-img"
+                    id="fence-img-2"
+                />
+                <img
+                    src={Fence3.src}
+                    alt="Fence 3"
+                    class="rw-fence-img"
+                    id="fence-img-3"
+                />
+                <img
+                    src={Fence4.src}
+                    alt="Fence 4"
+                    class="rw-fence-img"
+                    id="fence-img-4"
+                />
+                <img
+                    src={DeckWork.src}
+                    alt="Deck Work"
+                    class="rw-deck-img"
+                    id="deck-img-1"
+                />
+                <img
+                    src={Deck2.src}
+                    alt="Deck 2"
+                    class="rw-deck-img"
+                    id="deck-img-2"
+                />
+                <img
+                    src={Deck3.src}
+                    alt="Deck 3"
+                    class="rw-deck-img"
+                    id="deck-img-3"
+                />
+                <img
+                    src={Deck4.src}
+                    alt="Deck 4"
+                    class="rw-deck-img"
+                    id="deck-img-4"
+                />
+                <img
+                    src={Pergola1.src}
+                    alt="Pergola 1"
+                    class="rw-patio-img"
+                    id="patio-img-1"
+                />
+                <img
+                    src={Patio1.src}
+                    alt="Patio 1"
+                    class="rw-patio-img"
+                    id="patio-img-2"
+                />
+                <img
+                    src={Patio2.src}
+                    alt="Patio 2"
+                    class="rw-patio-img"
+                    id="patio-img-3"
+                />
+                <img
+                    src={Patio3.src}
+                    alt="Patio 3"
+                    class="rw-patio-img"
+                    id="patio-img-4"
+                />
+                <img
+                    src={Landscape1.src}
+                    alt="Landscape 1"
+                    class="rw-landscape-img"
+                    id="landscape-img-1"
+                />
+                <img
+                    src={Landscape2.src}
+                    alt="Landscape 2"
+                    class="rw-landscape-img"
+                    id="landscape-img-2"
+                />
+                <img
+                    src={Landscape3.src}
+                    alt="Landscape 3"
+                    class="rw-landscape-img"
+                    id="landscape-img-3"
+                />
+                <img
+                    src={Landscape4.src}
+                    alt="Landscape 4"
+                    class="rw-landscape-img"
+                    id="landscape-img-4"
+                />
             </div>
         </div>
     </div>
