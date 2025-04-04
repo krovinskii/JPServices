@@ -579,3 +579,103 @@
 .content-exp-icon-container img {
     width: 4rem;
 }
+.to-right {
+    position: relative;
+    left: 0.1rem;
+}
+@media (max-width: 992px) {
+    .content-exp-section {
+        flex-direction: column;
+    }
+    .content-exp-icon-container-container {
+        display: none;
+    }
+    .content-exp-main-img {
+        margin-top: 3rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 440px) {
+    .content-exp-section {
+        padding-top: 2rem;
+    }
+}
+/*
+==================================================================================================================CONTENT-RECENT-WORK===========================================================================================================
+*/
+.content-recent-works {
+    display: flex;
+    max-width: 100%;
+    padding: 5rem 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+.content-recent-works-container {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.content-recent-works-container h3 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.recent-works-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 33rem;
+    margin-bottom: 1.3rem;
+}
+.recent-works-navbar button {
+    all: unset;
+}
+.recent-works-navbar li {
+    list-style: none;
+    font-weight: 600;
+    color: #6e6e6e;
+}
+.recent-works-navbar li:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+.recent-works-navbar button:active {
+    color: #ffc107;
+    text-decoration: underline;
+}
+.rw-photo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+}
+
+.rw-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Use aspect-ratio to maintain proportions dynamically */
+.rw-photo-container img[data-orientation="portrait"] {
+    aspect-ratio: 9 / 16;
+    grid-row: span 2;
+}
+
+.rw-photo-container img[data-orientation="landscape"] {
+    aspect-ratio: 16 / 9;
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .rw-photo-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+.recent-works-navbar button.active {
+    color: #ffc107;
+    text-decoration: underline;
+}

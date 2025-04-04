@@ -5,7 +5,7 @@ import Fence from "../assets/fence.svg";
 import Hammer from "../assets/hammer.svg";
 ---
 
-<section class="content-exp-section">
+<section class="content-exp-section" aria-labelledby="experience-section">
     <div class="content-exp-section-container">
         <div class="content-exp-text-box">
             <h3>20+ years of Experience</h3>
@@ -19,21 +19,47 @@ import Hammer from "../assets/hammer.svg";
                 create a stunning patio, we ensure lasting results that enhance
                 the beauty and functionality of your space.
             </p>
-            <div class="content-exp-icon-container-container">
-                <div class="content-exp-icon-container">
-                    <img src={Leaf.src} />
+            <div class="content-exp-icon-container-container" role="list">
+                <div
+                    class="content-exp-icon-container"
+                    role="listitem"
+                    aria-label="Landscaping"
+                >
+                    <img
+                        src={Leaf.src}
+                        alt="Leaf icon representing landscaping"
+                    />
                     <p>Landscaping</p>
                 </div>
-                <div class="content-exp-icon-container">
-                    <img src={Fence.src} />
-                    <p>Fencing - All Types!</p>
+                <div
+                    class="content-exp-icon-container"
+                    role="listitem"
+                    aria-label="Fencing"
+                >
+                    <img
+                        src={Fence.src}
+                        class="to-right"
+                        alt="Fence icon representing fencing"
+                    />
+                    <p>Fencing</p>
                 </div>
-                <div class="content-exp-icon-container">
-                    <img src={Hammer.src} />
+                <div
+                    class="content-exp-icon-container"
+                    role="listitem"
+                    aria-label="Patio Covers"
+                >
+                    <img
+                        src={Hammer.src}
+                        alt="Hammer icon representing patio covers"
+                    />
                     <p>Patio Covers</p>
                 </div>
             </div>
         </div>
     </div>
-    <img class="content-exp-main-img" src={ContentPic.src} />
+    <img
+        class="content-exp-main-img"
+        src={ContentPic.src}
+        alt="The owner working on a project."
+    />
 </section>
