@@ -1,0 +1,53 @@
+<script src="../js/content-cta-modal.js"></script>
+<section class="content-CTA-container">
+    <div class="content-CTA-text-container">
+        <h6 class="cta-label">LET'S GET STARTED</h6>
+        <h2 class="cta-heading">Ready to build your dream backyard?</h2>
+        <p class="cta-subtext">
+            Call us or fill out our quick quote form — we’ll get back to you
+            within 24 hours with a free estimate and honest advice.
+        </p>
+        <div class="cta-buttons">
+            <a href="tel:1234567890" class="cta-btn call-btn">Call Now</a>
+            <button class="cta-btn quote-btn" id="openModalBtn">
+                Get a Quote
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal">
+    <div class="modal-content">
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+        <h3>Request a Free Quote</h3>
+        <form id="content-cta-form">
+            <input
+                type="text"
+                id="content-cta-form-name"
+                placeholder="Your Name"
+                required
+            />
+            <input
+                type="email"
+                id="content-cta-form-email"
+                placeholder="Your Email"
+                required
+            />
+            <input
+                type="tel"
+                id="content-cta-form-phone"
+                placeholder="Your Phone Number"
+                required
+            />
+            <textarea
+                id="content-cta-form-details"
+                placeholder="Project Details"
+                required
+            >
+            </textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+            <p id="content-cta-form-message" class="form-message"></p>
+        </form>
+    </div>
+</div>
