@@ -1,0 +1,107 @@
+---
+import companyData from "../data/company.json";
+import Layout from "../layouts/Layout.astro";
+import handymanCard from "../assets/handyman-card.jpg";
+import deckCard from "../assets/deck-card.jpg";
+import fenceCard from "../assets/fence-card.jpeg";
+import readySealLogo from "../assets/readyseallogo.webp";
+import timbertechLogo from "../assets/timbertechlogo.png";
+import belgardLogo from "../assets/belgardlogo.png";
+import trexlogo from "../assets/trexlogo.png";
+---
+
+<Layout>
+    <section class="jps-about">
+        <div class="about-hero">
+            <h1>About</h1>
+            <p>
+                Built to last, crafted with care — your local pros for outdoor
+                projects big and small.
+            </p>
+        </div>
+        <div class="about-summary">
+            <h5>Your Trusted Local Experts for Outdoor Improvements</h5>
+            <p>
+                At J Penaloza Construction, we’ve been helping folks in
+                Navasota, Conroe, Willis, The Woodlands, and surrounding areas
+                for over 20 years with quality fencing, decking, landscaping,
+                and handyman services. We’re a small, local business that takes
+                pride in honest work, fair pricing, and making sure every
+                project looks great and lasts. Whether you're sprucing up your
+                backyard or tackling a to-do list, we're here to lend a hand and
+                get it done right.
+            </p>
+        </div>
+        <section class="services-showcase">
+            <div class="service-card">
+                <img src={fenceCard.src} alt="Fencing Services" />
+                <h3>Fencing Services</h3>
+                <ul>
+                    <li>Privacy & Security</li>
+                    <li>Custom Wood & Ironwork</li>
+                    <li>Built to Last</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <img src={deckCard.src} alt="Deck & Patio Builds" />
+                <h3>Deck & Patio Builds</h3>
+                <ul>
+                    <li>Outdoor Living Spaces</li>
+                    <li>Quality Craftsmanship</li>
+                    <li>Weather-Resistant Materials</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <img src={handymanCard.src} alt="Landscaping & Handyman" />
+                <h3>Landscaping & Handyman</h3>
+                <ul>
+                    <li>Lawn & Garden Upgrades</li>
+                    <li>Reliable Repairs</li>
+                    <li>Full-Service Solutions</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="about-stats">
+            <div class="stat-block">
+                <h2>461</h2>
+                <p>Successful Projects</p>
+            </div>
+            <div class="stat-block">
+                <h2>290</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-block">
+                <h2>45</h2>
+                <p>Team Members</p>
+            </div>
+            <div class="stat-block">
+                <h2>36</h2>
+                <p>Awards</p>
+            </div>
+        </div>
+
+        <section class="trusted-brands-container">
+            <div class="trusted-brands-logo-row">
+                <img
+                    src={readySealLogo.src}
+                    alt="Ready Seal Stain"
+                    class="logo-item"
+                />
+                <img
+                    src={belgardLogo.src}
+                    alt="Belgard Pavers"
+                    class="logo-item"
+                />
+                <img
+                    src={timbertechLogo.src}
+                    alt="Timbertech Decking"
+                    class="logo-item"
+                />
+                <img src={trexlogo.src} alt="Trex Decking" class="logo-item" />
+            </div>
+        </section>
+    </section>
+</Layout>

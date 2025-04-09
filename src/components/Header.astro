@@ -1,59 +1,63 @@
 ---
 import facebookSVG from "../assets/facebook.svg";
 import googleSVG from "../assets/google.svg";
-import twitterSVG from "../assets/twitter.svg";
-import youtubeSVG from "../assets/youtube.svg";
-import instagramSVG from "../assets/instagram.svg";
+import links from "../data/links.json";
+import companyData from "../data/company.json";
 import "../styles/styles.css";
 ---
 
+<script src="../js/headerScroll.js"></script>
 <script src="../js/hamburger.js"></script>
 <header class="jps-header">
     <div class="jps-logo">
         <div class="jps-logo-icon">JP</div>
         <div class="jps-logo-text">
-            <span class="jps-logo-name">JP Services</span>
-            <span class="jps-logo-tagline">construction</span>
+            <span class="jps-logo-name">{companyData.name}</span>
+            <span class="jps-logo-tagline">{companyData.tagline}</span>
         </div>
     </div>
 
     <nav class="jps-nav" aria-label="Main navigation">
         <ul class="jps-nav-links">
-            <li><a href="" class="active">Home</a></li>
-            <li><a href="">Pages</a></li>
-            <li><a href="">Our Work</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Blog</a></li>
+            <li><a href={links.home}>Home</a></li>
+            <li><a href={links.about}>About</a></li>
+            <li><a href={links.gallery}>Our Work</a></li>
+            <li><a href={links.contact}>Contact</a></li>
+            <li><a href={links.blog}>Blog</a></li>
         </ul>
 
         <div class="mobile-phone">
             <span>
                 Call us: <a
-                    href="tel:936-111-1111"
-                    aria-label="Call us at 936-111-1111"
+                    href={`tel:${companyData.phone}`}
+                    aria-label={`Call us at ${companyData.phone}`}
                 >
-                    936-111-1111
+                    {companyData.phone}
                 </a>
             </span>
         </div>
 
         <div class="jps-socials mobile-socials">
-            <a href="https://facebook.com" aria-label="Facebook">
+            <a href={companyData.socials.facebook} aria-label="Facebook">
                 <img src={facebookSVG.src} alt="Facebook" />
             </a>
-            <a href="https://google.com" aria-label="Google">
+            <a href={companyData.socials.google} aria-label="Google">
                 <img src={googleSVG.src} alt="Google" />
             </a>
         </div>
     </nav>
     <div class="jps-phone">
-        <span>Call us: <a href="tel:936-111-1111">936-111-1111</a></span>
+        <span>
+            Call us: <a href={`tel:${companyData.phone}`}>
+                {companyData.phone}
+            </a>
+        </span>
     </div>
     <div class="jps-socials desktop-socials">
-        <a href="https://facebook.com" aria-label="Facebook">
+        <a href={companyData.socials.facebook} aria-label="Facebook">
             <img src={facebookSVG.src} alt="Facebook" />
         </a>
-        <a href="https://google.com" aria-label="Google">
+        <a href={companyData.socials.google} aria-label="Google">
             <img src={googleSVG.src} alt="Google" />
         </a>
     </div>

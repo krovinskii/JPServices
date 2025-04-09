@@ -1,0 +1,22 @@
+{
+    "name": "J Penaloza Construction",
+    "phone": "936-111-1211",
+    "email": "joseph@jpconstruction.com",
+    "address": {
+        "street": "123 Main Street",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77001"
+    },
+    "socials": {
+        "facebook": "https://facebook.com/jpservices",
+        "google": "https://google.com/jpservices"
+    },
+    "hours": {
+        "weekday": "8:00 AM - 6:00 PM",
+        "saturday": "9:00 AM - 3:00 PM",
+        "sunday": "Closed"
+    },
+    "tagline": "construction",
+    "description": "Expert construction and home improvement services"
+}

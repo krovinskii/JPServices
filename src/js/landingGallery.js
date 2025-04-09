@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    // Set initial state - show first image from each category
+    changePics([fence[0], deck[0], patio[0], landscape[0]]);
+
     // Event Listeners
     btnAll.addEventListener("click", () =>
         changePics([fence[0], deck[0], patio[0], landscape[0]]),
@@ -62,10 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function handleMobileSlider() {
             if (window.innerWidth <= mobileBreakpoint) {
-                // Find visible images
+                // Modified visibility check
                 const visibleImages = Array.from(
                     photoContainer.querySelectorAll("img"),
-                ).filter((img) => img.style.display !== "none");
+                ).filter(
+                    (img) =>
+                        img.style.display === "block" ||
+                        (window.getComputedStyle(img).display !== "none" &&
+                            img.src),
+                );
 
                 if (visibleImages.length <= 1) return; // No need for pagination with single image
 
@@ -84,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
                 }
 
-                // Update the dots
+                // Clear existing dots and create new ones only for visible images
                 scrollIndicator.innerHTML = "";
                 visibleImages.forEach((_, index) => {
                     const dot = document.createElement("span");
