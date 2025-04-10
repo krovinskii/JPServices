@@ -4,49 +4,128 @@ import "../styles/styles.css";
 
 <script src="../js/headerHeight.js"></script>
 <script src="../js/carousel.js"></script>
-<section class="jps-hero">
-    <div class="hero-carousel">
-        <div class="hero-slide active">
+<script src="../js/content-cta-modal.js"></script>
+
+<section class="jps-hero" aria-label="Hero Carousel">
+    <div class="hero-carousel" role="region" aria-label="Project Highlights">
+        <div
+            class="hero-slide active"
+            role="tabpanel"
+            aria-label="Deck Construction"
+        >
             <div class="jps-hero-text-container">
                 <h1>Crafting the Perfect Deck for Your Home</h1>
-                <h6>
+                <p class="hero-subtitle">
                     Elevate Your Outdoor Space with Expert Craftsmanship and
                     Quality Materials.
-                </h6>
+                </p>
                 <button
                     class="hero-btn"
-                    aria-label="Get a Free Quote for a Custom Deck"
+                    aria-label="Request a free quote for deck construction"
+                    id="openModalBtn"
                 >
                     Get a Free Quote
-                </button><!--link to contact form -->
+                </button>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" role="tabpanel" aria-label="Fence Installation">
             <div class="jps-hero-text-container">
                 <h1>Your Yard, Your Sanctuary</h1>
-                <h6>
+                <p class="hero-subtitle">
                     Block out noise and nosy neighbors with a fence built for
                     peace.
-                </h6>
+                </p>
                 <button
                     class="hero-btn"
-                    aria-label="Get a Free Quote for a Custom Deck"
+                    aria-label="Request a free quote for fence installation"
+                    id="openModalBtn"
                 >
                     Get a Free Quote
-                </button><!--link to contact form -->
+                </button>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" role="tabpanel" aria-label="Outdoor Living">
             <div class="jps-hero-text-container">
-                <h1>Luxury & Comfort, Right at Home.</h1>
-                <h6>Create a peaceful escape just steps from your door.</h6>
+                <h1>Luxury & Comfort, Right at Home</h1>
+                <p class="hero-subtitle">
+                    Create a peaceful escape just steps from your door.
+                </p>
                 <button
                     class="hero-btn"
-                    aria-label="Get a Free Quote for a Custom Deck"
+                    aria-label="Request a free quote for outdoor living space"
+                    id="openModalBtn"
                 >
                     Get a Free Quote
-                </button><!--link to contact form -->
+                </button>
             </div>
         </div>
     </div>
 </section>
+
+<div
+    class="modal-overlay"
+    id="modal"
+    role="dialog"
+    aria-labelledby="modalTitle"
+    aria-modal="true"
+    hidden
+>
+    <div class="modal-content">
+        <button class="close-modal" id="closeModalBtn" aria-label="Close modal">
+            &times;
+        </button>
+        <h2 id="modalTitle">Request a Free Quote</h2>
+        <form id="content-cta-form" role="form">
+            <div class="form-group">
+                <label for="content-cta-form-name">Your Name</label>
+                <input
+                    type="text"
+                    id="content-cta-form-name"
+                    name="name"
+                    required
+                    aria-required="true"
+                />
+            </div>
+            <div class="form-group">
+                <label for="content-cta-form-email">Your Email</label>
+                <input
+                    type="email"
+                    id="content-cta-form-email"
+                    name="email"
+                    required
+                    aria-required="true"
+                />
+            </div>
+            <div class="form-group">
+                <label for="content-cta-form-phone">Your Phone Number</label>
+                <input
+                    type="tel"
+                    id="content-cta-form-phone"
+                    name="phone"
+                    required
+                    aria-required="true"
+                />
+            </div>
+            <div class="form-group">
+                <label for="content-cta-form-details">Project Details</label>
+                <textarea
+                    id="content-cta-form-details"
+                    name="details"
+                    required
+                    aria-required="true"
+                >
+                </textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                Submit Quote Request
+            </button>
+            <p
+                id="content-cta-form-message"
+                class="form-message"
+                role="alert"
+                aria-live="polite"
+            >
+            </p>
+        </form>
+    </div>
+</div>
