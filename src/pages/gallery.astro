@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import DeckSVG from "../assets/deck2.jpeg";
+import { Image } from "astro:assets";
+import DeckWork from "../assets/deckwork.jpg";
+import FenceWork from "../assets/fencework.webp";
+import Fence2 from "../assets/fence2.jpg";
+import Fence3 from "../assets/fence3.webp";
+import Fence4 from "../assets/fence4.jpg";
+import Deck2 from "../assets/deck2.jpeg";
+import Deck3 from "../assets/deck3.jpeg";
+import Deck4 from "../assets/deck4.jpeg";
 ---
 
 <Layout
@@ -9,7 +17,6 @@ import DeckSVG from "../assets/deck2.jpeg";
 >
     <script src="../js/galleryPage.js"></script>
     <section class="gallery-section">
-        <!-- Category Navigation -->
         <div class="category-nav">
             <ul>
                 <li>
@@ -18,63 +25,117 @@ import DeckSVG from "../assets/deck2.jpeg";
                     </button>
                 </li>
                 <li>
-                    <button class="category-btn" data-category="RESIDENTIAL">
+                    <button class="category-btn" data-category="DECK">
                         DECKING
                     </button>
                 </li>
                 <li>
-                    <button class="category-btn" data-category="COMMERCIAL">
+                    <button class="category-btn" data-category="FENCE">
                         FENCING
                     </button>
                 </li>
                 <li>
-                    <button class="category-btn" data-category="INTERIOR">
+                    <button class="category-btn" data-category="LANDSCAPE">
                         LANDSCAPING
                     </button>
                 </li>
                 <li>
-                    <button class="category-btn" data-category="LANDSCAPE">
+                    <button class="category-btn" data-category="HANDYMAN">
                         HANDYMAN
                     </button>
                 </li>
             </ul>
         </div>
 
-        <!-- Gallery Grid -->
         <div class="gallery-grid">
-            <div class="gallery-item" data-categories="COMMERCIAL,ALL">
-                <img
-                    src={DeckSVG.src}
-                    alt="Modern curved architecture building"
+            <div class="gallery-item" data-categories="FENCE,ALL">
+                <Image
+                    src={FenceWork}
+                    alt="Professional fence installation"
+                    width={800}
+                    height={600}
+                    quality="high"
                 />
             </div>
-            <div class="gallery-item" data-categories="COMMERCIAL,ALL">
-                <img
-                    src={DeckSVG.src}
-                    alt="Modern curved architecture building"
+            <div class="gallery-item" data-categories="FENCE,ALL">
+                <Image
+                    src={Fence2}
+                    alt="Custom fence design"
+                    width={800}
+                    height={600}
+                    quality="high"
                 />
             </div>
-            <div class="gallery-item" data-categories="COMMERCIAL,ALL">
-                <img
-                    src={DeckSVG.src}
-                    alt="Modern curved architecture building"
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={DeckWork}
+                    alt="Custom deck project"
+                    width={800}
+                    height={600}
+                    quality="high"
                 />
             </div>
-            <div class="gallery-item" data-categories="RESIDENTIAL,ALL">
-                <img src={DeckSVG.src} alt="Residential home with garage" />
-            </div>
-            <div class="gallery-item" data-categories="INTERIOR,ALL">
-                <img
-                    src={DeckSVG.src}
-                    alt="Interior living room with red sofa"
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={Deck2}
+                    alt="Backyard deck installation"
+                    width={800}
+                    height={600}
+                    quality="high"
                 />
             </div>
-            <div class="gallery-item" data-categories="LANDSCAPE,ALL">
-                <img
-                    src={DeckSVG.src}
-                    alt="Commercial skyscrapers from below"
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={Deck3}
+                    alt="Modern deck design"
+                    width={800}
+                    height={600}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={Deck4}
+                    alt="Outdoor deck with seating"
+                    width={800}
+                    height={600}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="FENCE,ALL">
+                <Image
+                    src={Fence3}
+                    alt="Wooden fence with garden"
+                    width={800}
+                    height={600}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="FENCE,ALL">
+                <Image
+                    src={Fence4}
+                    alt="Privacy fence installation"
+                    width={800}
+                    height={600}
+                    quality="high"
                 />
             </div>
         </div>
     </section>
+
+    <!-- Fullscreen overlay for image preview -->
+    <div class="fullscreen-overlay" id="imageOverlay">
+        <button class="fullscreen-close" aria-label="Close image preview">
+            &times;
+        </button>
+        <img src="" alt="" class="fullscreen-image" id="fullscreenImage" />
+    </div>
 </Layout>
+
+<style>
+    .gallery-grid :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

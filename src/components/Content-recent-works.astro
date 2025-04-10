@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import DeckWork from "../assets/deckwork.jpg";
 import FenceWork from "../assets/fencework.webp";
 import Fence2 from "../assets/fence2.jpg";
@@ -43,104 +44,161 @@ import Landscape4 from "../assets/landscape4.jpg";
                 </ul>
             </div>
             <div class="rw-photo-container">
-                <img
-                    src={FenceWork.src}
+                <Image
+                    src={FenceWork}
                     alt="Fence Work"
+                    width={800}
+                    height={600}
                     class="rw-fence-img"
                     id="fence-img-1"
+                    quality="high"
                 />
-                <img
-                    src={Fence2.src}
+                <Image
+                    src={Fence2}
                     alt="Fence 2"
+                    width={800}
+                    height={600}
                     class="rw-fence-img"
                     id="fence-img-2"
+                    quality="high"
                 />
-                <img
-                    src={Fence3.src}
+                <Image
+                    src={Fence3}
                     alt="Fence 3"
+                    width={800}
+                    height={600}
                     class="rw-fence-img"
                     id="fence-img-3"
+                    quality="high"
                 />
-                <img
-                    src={Fence4.src}
+                <Image
+                    src={Fence4}
                     alt="Fence 4"
+                    width={800}
+                    height={600}
                     class="rw-fence-img"
                     id="fence-img-4"
+                    quality="high"
                 />
-                <img
-                    src={DeckWork.src}
+                <Image
+                    src={DeckWork}
                     alt="Deck Work"
+                    width={800}
+                    height={600}
                     class="rw-deck-img"
                     id="deck-img-1"
+                    quality="high"
                 />
-                <img
-                    src={Deck2.src}
+                <Image
+                    src={Deck2}
                     alt="Deck 2"
+                    width={800}
+                    height={600}
                     class="rw-deck-img"
                     id="deck-img-2"
+                    quality="high"
                 />
-                <img
-                    src={Deck3.src}
+                <Image
+                    src={Deck3}
                     alt="Deck 3"
+                    width={800}
+                    height={600}
                     class="rw-deck-img"
                     id="deck-img-3"
+                    quality="high"
                 />
-                <img
-                    src={Deck4.src}
+                <Image
+                    src={Deck4}
                     alt="Deck 4"
+                    width={800}
+                    height={600}
                     class="rw-deck-img"
                     id="deck-img-4"
+                    quality="high"
                 />
-                <img
-                    src={Pergola1.src}
+                <Image
+                    src={Pergola1}
                     alt="Pergola 1"
+                    width={800}
+                    height={600}
                     class="rw-patio-img"
                     id="patio-img-1"
+                    quality="high"
                 />
-                <img
-                    src={Patio1.src}
+                <Image
+                    src={Patio1}
                     alt="Patio 1"
+                    width={800}
+                    height={600}
                     class="rw-patio-img visible"
                     id="patio-img-2"
+                    quality="high"
                 />
-                <img
-                    src={Patio2.src}
+                <Image
+                    src={Patio2}
                     alt="Patio 2"
+                    width={800}
+                    height={600}
                     class="rw-patio-img"
                     id="patio-img-3"
+                    quality="high"
                 />
-                <img
-                    src={Patio3.src}
+                <Image
+                    src={Patio3}
                     alt="Patio 3"
+                    width={800}
+                    height={600}
                     class="rw-patio-img"
                     id="patio-img-4"
+                    quality="high"
                 />
-                <img
-                    src={Landscape1.src}
+                <Image
+                    src={Landscape1}
                     alt="Landscape 1"
+                    width={800}
+                    height={600}
                     class="rw-landscape-img"
                     id="landscape-img-1"
+                    quality="high"
                 />
-                <img
-                    src={Landscape2.src}
+                <Image
+                    src={Landscape2}
                     alt="Landscape 2"
+                    width={800}
+                    height={600}
                     class="rw-landscape-img"
                     id="landscape-img-2"
+                    quality="high"
                 />
-                <img
-                    src={Landscape3.src}
+                <Image
+                    src={Landscape3}
                     alt="Landscape 3"
+                    width={800}
+                    height={600}
                     class="rw-landscape-img"
                     id="landscape-img-3"
+                    quality="high"
                 />
-                <img
-                    src={Landscape4.src}
+                <Image
+                    src={Landscape4}
                     alt="Landscape 4"
+                    width={800}
+                    height={600}
                     class="rw-landscape-img"
                     id="landscape-img-4"
+                    quality="high"
                 />
             </div>
             <div class="scroll-indicator"></div>
         </div>
     </div>
 </section>
+
+<style>
+    .rw-photo-container :global(img) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+</style>

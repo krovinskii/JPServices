@@ -1,5 +1,9 @@
 ---
 import "../styles/styles.css";
+import { Image } from "astro:assets";
+import hero1 from "../assets/hero1.webp";
+import hero2 from "../assets/hero2.webp";
+import hero3 from "../assets/hero3.jpg";
 ---
 
 <script src="../js/headerHeight.js"></script>
@@ -13,6 +17,13 @@ import "../styles/styles.css";
             role="tabpanel"
             aria-label="Deck Construction"
         >
+            <Image
+                src={hero1}
+                alt="Deck construction"
+                width={1920}
+                height={1080}
+                quality="high"
+            />
             <div class="jps-hero-text-container">
                 <h1>Crafting the Perfect Deck for Your Home</h1>
                 <p class="hero-subtitle">
@@ -29,6 +40,13 @@ import "../styles/styles.css";
             </div>
         </div>
         <div class="hero-slide" role="tabpanel" aria-label="Fence Installation">
+            <Image
+                src={hero2}
+                alt="Fence installation"
+                width={1920}
+                height={1080}
+                quality="high"
+            />
             <div class="jps-hero-text-container">
                 <h1>Your Yard, Your Sanctuary</h1>
                 <p class="hero-subtitle">
@@ -45,6 +63,13 @@ import "../styles/styles.css";
             </div>
         </div>
         <div class="hero-slide" role="tabpanel" aria-label="Outdoor Living">
+            <Image
+                src={hero3}
+                alt="Outdoor living space"
+                width={1920}
+                height={1080}
+                quality="high"
+            />
             <div class="jps-hero-text-container">
                 <h1>Luxury & Comfort, Right at Home</h1>
                 <p class="hero-subtitle">
