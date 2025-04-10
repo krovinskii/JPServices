@@ -887,11 +887,14 @@ body {
 .testimonials-slider {
     position: relative;
     width: 100%;
+    touch-action: pan-x; /* Enable horizontal touch gestures */
+    user-select: none; /* Prevent text selection during swipe */
 }
 
 .testimonial-slide {
     display: none;
     animation: fadeEffect 1.5s;
+    transition: transform 0.3s ease;
 }
 
 .testimonial-slide.active {
@@ -1766,4 +1769,228 @@ body {
 
 .fullscreen-close:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+/* ================================================
+   CONTACT - Contact Form and map component
+   ================================================ */
+.jps-contact-hero-section {
+    position: relative;
+    height: 30vh;
+    max-height: 500px;
+    background: url(../assets/contact-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.jps-contact-hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 1;
+}
+
+.jps-contact-hero-section h1,
+.jps-contact-hero-section p {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.jps-contact-hero-section h1 {
+    font-size: 3.3rem;
+}
+.jps-contact-hero-section p {
+    margin-top: 1rem;
+    max-width: 30rem;
+    font-size: 1.33rem;
+    line-height: 1.8rem;
+    color: #e2e2e2;
+}
+/* Overall Layout */
+.jps-contact-form-section,
+.jps-contact-info-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Form Section Styles */
+.jps-contact-form-section {
+    background-color: #fff;
+}
+
+.jps-contact-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.jps-contact-form-group {
+    margin-bottom: 25px;
+}
+
+/* Make message field span both columns */
+.jps-contact-form-group:nth-last-child(2) {
+    grid-column: 1 / -1;
+}
+
+/* Make button align properly */
+.jps-contact-form button {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+.jps-contact-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.jps-contact-required {
+    color: #ffb400;
+}
+
+.jps-contact-input,
+.jps-contact-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.jps-contact-input:focus,
+.jps-contact-textarea:focus {
+    border-color: #ffb400;
+    outline: none;
+}
+
+.jps-contact-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.jps-contact-send-button {
+    background-color: #ffb400;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.jps-contact-send-button:hover {
+    background-color: #e5a200;
+}
+/* Contact Info Section Styles */
+.jps-contact-info-section {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.jps-contact-info-container {
+    padding: 40px 50px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+}
+
+.jps-contact-company {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.jps-contact-info-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jps-contact-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.jps-contact-address-line,
+.jps-contact-phone {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.jps-contact-email a {
+    color: #ffb400;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+.jps-contact-email a:hover {
+    color: #e5a200;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .jps-contact-info-container {
+        max-width: 90%;
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .jps-contact-info-section {
+        padding: 40px 15px;
+    }
+
+    .jps-contact-info-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+}
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .jps-contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .jps-contact-form-section,
+    .jps-contact-info-section {
+        padding: 40px 15px;
+    }
+
+    .jps-contact-form-group {
+        margin-bottom: 20px;
+    }
+
+    .jps-contact-info-container {
+        padding: 30px 20px;
+    }
 }

@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CompanyData from "../data/company.json";
+---
+
+<Layout>
+    <section class="jps-contact-hero-section">
+        <h1>Shoot us a message</h1>
+        <p>Or call us. We don't judge.</p>
+    </section>
+    <section class="jps-contact-form-section">
+        <form class="jps-contact-form">
+            <div class="jps-contact-form-group">
+                <label for="name" class="jps-contact-label">
+                    Name <span class="jps-contact-required">*</span>
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                    class="jps-contact-input"
+                />
+            </div>
+
+            <div class="jps-contact-form-group">
+                <label for="email" class="jps-contact-label">
+                    Email <span class="jps-contact-required">*</span>
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    class="jps-contact-input"
+                />
+            </div>
+            <div class="jps-contact-form-group">
+                <label for="subject" class="jps-contact-label">
+                    Subject <span class="jps-contact-required">*</span>
+                </label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                    class="jps-contact-input"
+                />
+            </div>
+
+            <div class="jps-contact-form-group">
+                <label for="phone" class="jps-contact-label">
+                    Phone <span class="jps-contact-required">*</span>
+                </label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone"
+                    required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    class="jps-contact-input"
+                />
+            </div>
+
+            <div class="jps-contact-form-group">
+                <label for="message" class="jps-contact-label">
+                    Message <span class="jps-contact-required">*</span>
+                </label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required
+                    class="jps-contact-textarea"
+                >
+                </textarea>
+            </div>
+
+            <button type="submit" class="jps-contact-send-button">SEND</button>
+        </form>
+    </section>
+    <section class="jps-contact-info-section">
+        <div class="jps-contact-info-container">
+            <p class="jps-contact-company">{CompanyData.name}</p>
+
+            <div class="jps-contact-info-group">
+                <span class="jps-contact-label">Address:</span>
+                <p class="jps-contact-address-line">
+                    {CompanyData.address.city}, {CompanyData.address.state}
+                </p>
+            </div>
+
+            <div class="jps-contact-info-group">
+                <span class="jps-contact-label">Phone:</span>
+                <p class="jps-contact-phone">{CompanyData.phone}</p>
+            </div>
+
+            <div class="jps-contact-info-group">
+                <span class="jps-contact-label">Email:</span>
+                <p class="jps-contact-email">
+                    <a href={`mailto:${CompanyData.email}`}>
+                        {CompanyData.email}
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+</Layout>
