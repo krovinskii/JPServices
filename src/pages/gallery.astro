@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DeckSVG from "../assets/deck2.jpeg";
+---
+
+<Layout>
+    <script src="../js/galleryPage.js"></script>
+    <section class="gallery-section">
+        <!-- Category Navigation -->
+        <div class="category-nav">
+            <ul>
+                <li>
+                    <button class="category-btn active" data-category="ALL">
+                        ALL
+                    </button>
+                </li>
+                <li>
+                    <button class="category-btn" data-category="RESIDENTIAL">
+                        DECKING
+                    </button>
+                </li>
+                <li>
+                    <button class="category-btn" data-category="COMMERCIAL">
+                        FENCING
+                    </button>
+                </li>
+                <li>
+                    <button class="category-btn" data-category="INTERIOR">
+                        LANDSCAPING
+                    </button>
+                </li>
+                <li>
+                    <button class="category-btn" data-category="LANDSCAPE">
+                        HANDYMAN
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <div class="gallery-item" data-categories="COMMERCIAL,ALL">
+                <img
+                    src={DeckSVG.src}
+                    alt="Modern curved architecture building"
+                />
+            </div>
+            <div class="gallery-item" data-categories="COMMERCIAL,ALL">
+                <img
+                    src={DeckSVG.src}
+                    alt="Modern curved architecture building"
+                />
+            </div>
+            <div class="gallery-item" data-categories="COMMERCIAL,ALL">
+                <img
+                    src={DeckSVG.src}
+                    alt="Modern curved architecture building"
+                />
+            </div>
+            <div class="gallery-item" data-categories="RESIDENTIAL,ALL">
+                <img src={DeckSVG.src} alt="Residential home with garage" />
+            </div>
+            <div class="gallery-item" data-categories="INTERIOR,ALL">
+                <img
+                    src={DeckSVG.src}
+                    alt="Interior living room with red sofa"
+                />
+            </div>
+            <div class="gallery-item" data-categories="LANDSCAPE,ALL">
+                <img
+                    src={DeckSVG.src}
+                    alt="Commercial skyscrapers from below"
+                />
+            </div>
+        </div>
+    </section>
+</Layout>

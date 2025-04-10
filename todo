@@ -1,6 +1,4 @@
-..IPAD NEEDS HAMBURGER MENU FOR BETTER UX..
-
-We need to go ahead and template this out using a JSON and importing common things link phone, email, address, company name etc
+Next...contact forms and link all btns to modals
 
 BUGS:
 call us phone numbher in header doesnt have header effect. cannot figure ot why. needs digging into.

@@ -1381,6 +1381,8 @@ body {
 @media (max-width: 440px) {
     .about-hero {
         margin: 0;
+        height: 93vh;
+        max-height: 100vh;
     }
     .about-hero p {
         max-width: 20rem;
@@ -1588,4 +1590,130 @@ body {
     .about-cta h3 {
         font-size: 1.75rem;
     }
+}
+/* ================================================
+    Gallery - All Work
+   ================================================ */
+
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.category-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.category-nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.category-nav button {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 4px 2px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.category-nav button:hover {
+    color: #374151;
+}
+
+.category-nav button.active {
+    color: #f59e0b;
+}
+
+.category-nav button.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f59e0b;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-nav button {
+        font-size: 14px;
+        padding: 4px 4px;
+    }
+
+    .category-nav ul {
+        gap: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .category-nav button {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .category-nav ul {
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+}
+
+.gallery-item {
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item.hidden {
+    display: none;
 }
