@@ -3,6 +3,7 @@ import facebookSVG from "../assets/facebook.svg";
 import googleSVG from "../assets/google.svg";
 import links from "../data/links.json";
 import companyData from "../data/company.json";
+import logo from "../assets/joseph-skin.webp";
 import "../styles/styles.css";
 ---
 
@@ -10,7 +11,7 @@ import "../styles/styles.css";
 <script src="../js/hamburger.js"></script>
 <header class="jps-header">
     <div class="jps-logo">
-        <div class="jps-logo-icon">JP</div>
+        <img class="jps-logo-icon" src={logo.src} />
         <div class="jps-logo-text">
             <span class="jps-logo-name">{companyData.name}</span>
             <span class="jps-logo-tagline">{companyData.tagline}</span>
