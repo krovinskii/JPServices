@@ -1518,6 +1518,9 @@ body {
         height: 93vh;
         max-height: 100vh;
     }
+    .about-hero h1 {
+        text-align: left;
+    }
     .about-hero p {
         max-width: 20rem;
     }
