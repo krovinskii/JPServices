@@ -24,11 +24,13 @@ const {
         <title>{title} | Navasota Construction</title>
     </head>
     <body>
-        <Header />
-        <main>
-            <slot />
-        </main>
-        <Footer />
+        <div class="page-wrapper">
+            <Header />
+            <main>
+                <slot />
+            </main>
+            <Footer />
+        </div>
     </body>
 </html>
 

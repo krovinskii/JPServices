@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CompanyData from "../data/company.json";
+import { Image } from "astro:assets";
+import logo from "../assets/joseph-skin.webp";
 ---
 
 <Layout
@@ -88,28 +90,38 @@ import CompanyData from "../data/company.json";
     </section>
     <section class="jps-contact-info-section">
         <div class="jps-contact-info-container">
-            <p class="jps-contact-company">{CompanyData.name}</p>
+            <div class="contact-info-wrapper">
+                <p class="jps-contact-company">{CompanyData.name}</p>
 
-            <div class="jps-contact-info-group">
-                <span class="jps-contact-label">Address:</span>
-                <p class="jps-contact-address-line">
-                    {CompanyData.address.city}, {CompanyData.address.state}
-                </p>
-            </div>
+                <div class="jps-contact-info-group">
+                    <span class="jps-contact-label">Address:</span>
+                    <p class="jps-contact-address-line">
+                        {CompanyData.address.city}, {CompanyData.address.state}
+                    </p>
+                </div>
 
-            <div class="jps-contact-info-group">
-                <span class="jps-contact-label">Phone:</span>
-                <p class="jps-contact-phone">{CompanyData.phone}</p>
-            </div>
+                <div class="jps-contact-info-group">
+                    <span class="jps-contact-label">Phone:</span>
+                    <p class="jps-contact-phone">{CompanyData.phone}</p>
+                </div>
 
-            <div class="jps-contact-info-group">
-                <span class="jps-contact-label">Email:</span>
-                <p class="jps-contact-email">
-                    <a href={`mailto:${CompanyData.email}`}>
-                        {CompanyData.email}
-                    </a>
-                </p>
+                <div class="jps-contact-info-group">
+                    <span class="jps-contact-label">Email:</span>
+                    <p class="jps-contact-email">
+                        <a href={`mailto:${CompanyData.email}`}>
+                            {CompanyData.email}
+                        </a>
+                    </p>
+                </div>
             </div>
+            <Image
+                src={logo}
+                alt="Professional fence installation"
+                width={400}
+                height={600}
+                quality="high"
+                class="contact-logo"
+            />
         </div>
     </section>
 </Layout>

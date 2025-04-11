@@ -972,6 +972,8 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
+    color: #333;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .faq-answer {
@@ -1142,7 +1144,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    margin-top: auto; /* This pushes footer to bottom */
 }
+
 .footer-top-container {
     display: flex;
     justify-content: center;
@@ -1880,23 +1884,59 @@ body {
     background-color: #e5a200;
 }
 /* Contact Info Section Styles */
-.jps-contact-info-section {
-    background-color: #f8f8f8;
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
 .jps-contact-info-container {
     padding: 40px 50px;
     background-color: #fff;
     width: 100%;
-    max-width: 800px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
+/* Add styles for the info wrapper */
+.contact-info-wrapper {
+    flex: 1;
+}
+
+/* Add styles for the contact logo */
+.contact-logo {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    top: 2.5rem;
+    filter: drop-shadow(0 0 0.14rem rgb(0, 0, 0));
+}
+
+/* Add media query for responsive layout */
+@media (max-width: 768px) {
+    .jps-contact-info-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-logo {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 900px) {
+    .jps-contact-hero-section {
+        margin: 0;
+    }
+    .contact-logo {
+        top: 2.2rem;
+    }
+}
+@media (max-width: 900px) {
+    .contact-logo {
+        top: 1.9rem;
+    }
+}
 .jps-contact-company {
     font-size: 24px;
     font-weight: 700;
@@ -1975,4 +2015,17 @@ body {
     .jps-contact-info-container {
         padding: 30px 20px;
     }
+}
+.jps-phone a:hover {
+    color: #e5a200;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================================
+   Page Wrapper - Ensures footer stays at bottom
+   ================================================ */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
