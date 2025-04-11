@@ -1,0 +1,175 @@
+[33mcommit a7990437b1373d688b7fc25aee0e8781fd25fe43[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 11 11:09:22 2025 -0500
+
+    revert
+
+[33mcommit f8883d9ed5c9da08ad98546d0ade608c9f319ee5[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 11 10:59:51 2025 -0500
+
+    optimizations
+
+[33mcommit 73aa6c4a8774723541549593677e9f09efaaf17d[m
+Merge: 1b56bdd 187a849
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 11 10:09:16 2025 -0500
+
+    Merge branch 'main' of https://github.com/krovinskii/JPServices
+
+[33mcommit 1b56bddf2a34ebfb1d0720da2e799fd0eb820524[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 11 10:09:02 2025 -0500
+
+    css
+
+[33mcommit 187a8499fa1afa5a7ed663e440f1b62684e7d312[m
+Author: Krivonski <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 11 08:53:55 2025 -0500
+
+    Update todo
+
+[33mcommit 451ac2d8ad23d28d224e042cc2fecc673fe2621a[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 19:58:05 2025 -0500
+
+    feat: rick roll
+
+[33mcommit bef949c47829cb6895264e2eac29633a89d26596[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 19:53:34 2025 -0500
+
+    fix(gallery): updated nav
+
+[33mcommit 18a3562de870e2d3450e04772262f9f54c6cacf8[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 19:23:27 2025 -0500
+
+    fix: minor fixes and alignments
+
+[33mcommit 4235449ffa6131a1a151d96fe5f2ce5e14ef9088[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 14:43:44 2025 -0500
+
+    fix: minor ffixes to performace and a11y
+
+[33mcommit 9f8e79b15b0eb22e1d954cfa65d418fd600c62f4[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 14:34:56 2025 -0500
+
+    fix: optimized images
+
+[33mcommit 6a39178ce9ff2c9c2d14bbb8e9808b1e1a93afed[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 14:20:42 2025 -0500
+
+    minor fixes
+
+[33mcommit 53d7eda24a3b551c288b6b8e51d8f42b48175ca3[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 10 14:01:51 2025 -0500
+
+    test for mobile
+
+[33mcommit 82a64a761b0234047d0e605b0b899af2f9114fa5[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 20:32:51 2025 -0500
+
+    feat: logo change
+
+[33mcommit ca5d62607a2e3d069bf5e617e896439ca48a711f[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 20:11:16 2025 -0500
+
+    feat(gallery): added full screen on click
+
+[33mcommit cf7a8567be19dc455e0691227b99b6fe5baea0e9[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 20:07:52 2025 -0500
+
+    feat(gallery): complete
+
+[33mcommit 7e671076eb09f0d09e64e660ebffbbe0a1c94dd5[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 19:41:35 2025 -0500
+
+    added netlify config
+
+[33mcommit 2dfb5337149ef0ee8b0935786a44e7a7a82675ed[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 19:38:35 2025 -0500
+
+    test
+
+[33mcommit b0f33ddde6fa1b200b75f864850fb2375f66ac74[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 19:33:11 2025 -0500
+
+    test
+
+[33mcommit e2302bf7d8d544ee25ef337cd63d9256be8acfe6[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 9 15:03:05 2025 -0500
+
+    feat(About): page completed
+
+[33mcommit 545b14e4f5715a6d3090087982680de81e9b3fdb[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Sun Apr 6 06:10:50 2025 -0500
+
+    feat(CTA + FOOTER): desktop done, need mobile
+
+[33mcommit 8b7b903b78062443a409d92051326672c19ae1c3[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 4 19:32:25 2025 -0500
+
+    feat(testimonials): layout on desktop and mobile. need carosuel
+
+[33mcommit d1fcb2377eb2048540724aaf792cc452e414924d[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Fri Apr 4 12:09:48 2025 -0500
+
+    feat(recent-works): gallery good on desktop
+
+[33mcommit 5dba469497ff3e39cf48c6cde7ec70d36c2b6776[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Thu Apr 3 19:51:39 2025 -0500
+
+    feat(recent-works): masonry effect in progress. custom.
+
+[33mcommit 62ef884560ba21cb70012e1ecf7a6bfd2f7cfcc5[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 2 20:12:21 2025 -0500
+
+    feat(content-exp): section done desktop
+
+[33mcommit 8b0a8f76b69c618e895e6629e026ea04bf1b253a[m
+Merge: 0f660de f03feda
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 2 19:35:30 2025 -0500
+
+    Merge branch 'main' of https://github.com/krovinskii/JPServices
+
+[33mcommit 0f660de9607895393ea8403fb0713bbb215e5413[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Wed Apr 2 19:35:29 2025 -0500
+
+    feat(hero): carousel finished, minor a11y adjustments needed
+
+[33mcommit f03feda42f9d8e2c50f1b9ab1119df289a2e3d73[m
+Author: Krivonski <181596453+krovinskii@users.noreply.github.com>
+Date:   Tue Apr 1 10:55:09 2025 -0500
+
+    Update README.md
+
+[33mcommit 0f2577cfde7a95e92af398ab596f842ce9e3f814[m
+Author: Krovinskii <181596453+krovinskii@users.noreply.github.com>
+Date:   Mon Mar 31 20:37:49 2025 -0500
+
+    header near done
+
+[33mcommit 352f671736039a421970b5b352ed1c580274d5bd[m
+Author: houston[bot] <astrobot-houston@users.noreply.github.com>
+Date:   Mon Mar 31 15:33:21 2025 -0500
+
+    Initial commit from Astro
