@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import ContentPic from "../assets/content-exp.jpg";
 import Leaf from "../assets/leaf.svg";
 import Fence from "../assets/fence.svg";
@@ -14,16 +15,19 @@ import Hammer from "../assets/hammer.svg";
                 patios, we bring a wealth of knowledge and skill to every
                 project. Serving Navasota, TX, and surrounding areas, our team
                 is committed to providing high-quality outdoor solutions
-                tailored to your unique vision. Whether you’re looking to
+                tailored to your unique vision. Whether you're looking to
                 upgrade your backyard with a custom deck, add a new fence, or
                 create a stunning patio, we ensure lasting results that enhance
                 the beauty and functionality of your space.
             </p>
         </div>
     </div>
-    <img
+    <Image
+        src={ContentPic}
+        alt="The owner working on a project"
+        width={800}
+        height={600}
         class="content-exp-main-img"
-        src={ContentPic.src}
-        alt="The owner working on a project."
+        quality="high"
     />
 </section>

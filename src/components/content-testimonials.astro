@@ -1,5 +1,24 @@
+---
+import { getImage } from "astro:assets";
+import testimonialBg from "../assets/test.jpg";
+
+// Optimize the background image
+const optimizedBg = await getImage({
+    src: testimonialBg,
+    format: "webp",
+    width: 1920,
+    quality: 80,
+});
+---
+
+<!-- Add preload link in head -->
+<link rel="preload" as="image" href={optimizedBg.src} fetchpriority="high" />
+
 <script src="../js/reviewCarosel.js"></script>
-<section class="content-testimonials-container">
+<section
+    class="content-testimonials-container"
+    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${optimizedBg.src});`}
+>
     <h3>TESTIMONIALS</h3>
     <h6>What People Are Saying</h6>
     <div class="testimonials-slider">
@@ -72,3 +91,15 @@
         <span class="dot" data-slide="5"></span>
     </div>
 </section>
+
+<style>
+    .content-testimonials-container {
+        /* Add low-quality placeholder */
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+            url(data:image/jpeg;base64,/9j/4AAQSkZJRg...); /* Add a tiny base64 placeholder */
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+            url(../assets/test.jpg);
+    }
+</style>

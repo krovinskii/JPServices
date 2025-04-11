@@ -960,12 +960,15 @@ body {
    Testimonials - Customer reviews carousel
    ================================================ */
 .content-testimonials-container {
-    background:
+    /* Add loading strategy */
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
         url(../assets/test.jpg);
     background-size: cover;
     background-position: center;
-    margin: 0rem 2rem 3rem 2rem;
+    /* Add these properties */
+    will-change: background-image;
+    contain: content;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -973,7 +976,8 @@ body {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.56);
 }
 
-.content-testimonials-container h3 {
+.content-testimonials-container h3,
+.spaced-text {
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.5rem;
@@ -1512,14 +1516,43 @@ body {
     margin-right: auto;
     text-align: left;
 }
+.about-cta-btn {
+    display: inline-block;
+    padding: 1rem 3rem; /* Match hero-btn padding */
+    width: fit-content; /* Match hero-btn width */
+    background-color: #ffc107;
+    color: #333;
+    font-weight: 600; /* Match hero-btn font-weight */
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem auto 0; /* Center the button and add consistent spacing */
+}
+
+.about-cta-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-cta-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
 @media (max-width: 440px) {
     .about-hero {
         margin: 0;
         height: 93vh;
         max-height: 100vh;
     }
-    .about-hero h1 {
+    .about-hero h1,
+    .about-summary h5,
+    .about-summary p {
         text-align: left;
+        margin: 0;
     }
     .about-hero p {
         max-width: 20rem;
