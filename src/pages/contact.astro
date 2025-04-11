@@ -5,16 +5,23 @@ import { Image } from "astro:assets";
 import logo from "../assets/joseph-skin.webp";
 ---
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+    function onSubmit(token) {
+        document.getElementById("submit-form").submit();
+    }
+</script>
+
 <Layout
     title="Contact"
     description="Ready to start your next project? Contact JP Construction for a free consultation. Call us or send a message—we’re here to help bring your vision to life."
 >
     <section class="jps-contact-hero-section">
         <h1>Shoot us a message</h1>
-        <p>Or call us. We don't judge.</p>
     </section>
     <section class="jps-contact-form-section">
-        <form class="jps-contact-form">
+        <form class="jps-contact-form" id="submit-form">
             <div class="jps-contact-form-group">
                 <label for="name" class="jps-contact-label">
                     Name <span class="jps-contact-required">*</span>
@@ -85,7 +92,15 @@ import logo from "../assets/joseph-skin.webp";
                 </textarea>
             </div>
 
-            <button type="submit" class="jps-contact-send-button">SEND</button>
+            <button
+                type="submit"
+                class="jps-contact-send-button g-recaptcha"
+                data-sitekey="6LcDYBMrAAAAAAGHut21AwAiS0mlGQ3mJb3Uobj9"
+                data-callback="onSubmit"
+                data-action="submit"
+            >
+                SEND
+            </button>
         </form>
     </section>
     <section class="jps-contact-info-section">

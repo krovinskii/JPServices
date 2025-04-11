@@ -34,53 +34,40 @@ categoryButtons.forEach((button) => {
 
 // Fullscreen functionality
 document.addEventListener("DOMContentLoaded", () => {
-    // Create fullscreen overlay
-    const overlay = document.createElement("div");
-    overlay.className = "fullscreen-overlay";
-    document.body.appendChild(overlay);
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+    const overlay = document.getElementById("imageOverlay");
+    const fullscreenImage = document.getElementById("fullscreenImage");
+    const closeButton = document.querySelector(".fullscreen-close");
 
-    // Add close button to overlay
-    const closeBtn = document.createElement("button");
-    closeBtn.className = "fullscreen-close";
-    closeBtn.innerHTML = "×";
-    overlay.appendChild(closeBtn);
-
-    // Create image container in overlay
-    const fullImg = document.createElement("img");
-    fullImg.className = "fullscreen-image";
-    overlay.appendChild(fullImg);
-
-    // Add click event to all gallery images
+    // Open fullscreen
     galleryItems.forEach((item) => {
-        const img = item.querySelector("img");
-
-        img.addEventListener("click", () => {
-            fullImg.src = img.src;
-            fullImg.alt = img.alt;
-            overlay.classList.add("active");
-            document.body.style.overflow = "hidden"; // Prevent scrolling when fullscreen is active
+        item.addEventListener("click", () => {
+            fullscreenImage.src = item.src;
+            fullscreenImage.alt = item.alt;
+            overlay.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
         });
     });
 
-    // Close fullscreen on button click
-    closeBtn.addEventListener("click", () => {
-        overlay.classList.remove("active");
-        document.body.style.overflow = ""; // Restore scrolling
+    // Close fullscreen
+    closeButton.addEventListener("click", () => {
+        overlay.style.display = "none";
+        document.body.style.overflow = "auto"; // Restore scrolling
     });
 
-    // Close fullscreen on overlay click (not on image)
+    // Close on overlay click
     overlay.addEventListener("click", (e) => {
         if (e.target === overlay) {
-            overlay.classList.remove("active");
-            document.body.style.overflow = ""; // Restore scrolling
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto";
         }
     });
 
-    // Close fullscreen on Escape key
+    // Close on escape key
     document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && overlay.classList.contains("active")) {
-            overlay.classList.remove("active");
-            document.body.style.overflow = ""; // Restore scrolling
+        if (e.key === "Escape" && overlay.style.display === "flex") {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto";
         }
     });
 });

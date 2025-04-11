@@ -9,11 +9,19 @@ import Fence4 from "../assets/fence4.jpg";
 import Deck2 from "../assets/deck2.jpeg";
 import Deck3 from "../assets/deck3.jpeg";
 import Deck4 from "../assets/deck4.jpeg";
+import Pergola1 from "../assets/pergola1.webp";
+import Patio1 from "../assets/patiocover1.jpeg";
+import Patio2 from "../assets/patiocover2.jpeg";
+import Patio3 from "../assets/patiocover3.jpeg";
+import Landscape1 from "../assets/landscape1.webp";
+import Landscape2 from "../assets/landscape2.jpeg";
+import Landscape3 from "../assets/landscape3.jpeg";
+import Landscape4 from "../assets/landscape4.jpg";
 ---
 
 <Layout
     title="Gallery"
-    description="Browse our gallery of completed projects, including decks, patios, handyman services, and more. See the quality and attention to detail JP Construction is known for."
+    description="Browse our gallery of completed projects, including decks, patios, handyman services, and more."
 >
     <script src="../js/galleryPage.js"></script>
     <section class="gallery-section">
@@ -40,20 +48,21 @@ import Deck4 from "../assets/deck4.jpeg";
                     </button>
                 </li>
                 <li>
-                    <button class="category-btn" data-category="HANDYMAN">
-                        HANDYMAN
+                    <button class="category-btn" data-category="PATIOS">
+                        PATIOS
                     </button>
                 </li>
             </ul>
         </div>
 
         <div class="gallery-grid">
+            <!-- Fencing -->
             <div class="gallery-item" data-categories="FENCE,ALL">
                 <Image
                     src={FenceWork}
                     alt="Professional fence installation"
-                    width={800}
-                    height={600}
+                    width={1600}
+                    height={900}
                     quality="high"
                 />
             </div>
@@ -61,44 +70,8 @@ import Deck4 from "../assets/deck4.jpeg";
                 <Image
                     src={Fence2}
                     alt="Custom fence design"
-                    width={800}
-                    height={600}
-                    quality="high"
-                />
-            </div>
-            <div class="gallery-item" data-categories="DECK,ALL">
-                <Image
-                    src={DeckWork}
-                    alt="Custom deck project"
-                    width={800}
-                    height={600}
-                    quality="high"
-                />
-            </div>
-            <div class="gallery-item" data-categories="DECK,ALL">
-                <Image
-                    src={Deck2}
-                    alt="Backyard deck installation"
-                    width={800}
-                    height={600}
-                    quality="high"
-                />
-            </div>
-            <div class="gallery-item" data-categories="DECK,ALL">
-                <Image
-                    src={Deck3}
-                    alt="Modern deck design"
-                    width={800}
-                    height={600}
-                    quality="high"
-                />
-            </div>
-            <div class="gallery-item" data-categories="DECK,ALL">
-                <Image
-                    src={Deck4}
-                    alt="Outdoor deck with seating"
-                    width={800}
-                    height={600}
+                    width={1600}
+                    height={900}
                     quality="high"
                 />
             </div>
@@ -106,8 +79,8 @@ import Deck4 from "../assets/deck4.jpeg";
                 <Image
                     src={Fence3}
                     alt="Wooden fence with garden"
-                    width={800}
-                    height={600}
+                    width={1600}
+                    height={900}
                     quality="high"
                 />
             </div>
@@ -115,8 +88,122 @@ import Deck4 from "../assets/deck4.jpeg";
                 <Image
                     src={Fence4}
                     alt="Privacy fence installation"
-                    width={800}
-                    height={600}
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+
+            <!-- Decking -->
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={DeckWork}
+                    alt="Custom deck project"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={Deck2}
+                    alt="Backyard deck installation"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={Deck3}
+                    alt="Modern deck design"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="DECK,ALL">
+                <Image
+                    src={Deck4}
+                    alt="Outdoor deck with seating"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+
+            <!-- Patios -->
+            <div class="gallery-item" data-categories="PATIOS,ALL">
+                <Image
+                    src={Pergola1}
+                    alt="Custom pergola build"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="PATIOS,ALL">
+                <Image
+                    src={Patio1}
+                    alt="Covered patio design"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="PATIOS,ALL">
+                <Image
+                    src={Patio2}
+                    alt="Patio cover installation"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="PATIOS,ALL">
+                <Image
+                    src={Patio3}
+                    alt="Custom patio space"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+
+            <!-- Landscaping -->
+            <div class="gallery-item" data-categories="LANDSCAPE,ALL">
+                <Image
+                    src={Landscape1}
+                    alt="Professional landscaping"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="LANDSCAPE,ALL">
+                <Image
+                    src={Landscape2}
+                    alt="Garden design"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="LANDSCAPE,ALL">
+                <Image
+                    src={Landscape3}
+                    alt="Landscape renovation"
+                    width={1600}
+                    height={900}
+                    quality="high"
+                />
+            </div>
+            <div class="gallery-item" data-categories="LANDSCAPE,ALL">
+                <Image
+                    src={Landscape4}
+                    alt="Yard transformation"
+                    width={1600}
+                    height={900}
                     quality="high"
                 />
             </div>
