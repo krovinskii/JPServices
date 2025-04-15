@@ -21,6 +21,17 @@ By building this project, I will familiarize myself with the following:
 - Integrating external resources (CSS, images, etc.)
 - SEO optimization and performance best practices
 
+## What I’ve Learned So Far
+
+- How to scaffold a new Astro project using the CLI
+- File-based routing in Astro (`/src/pages`)
+- Creating and reusing `.astro` components
+- Using Markdown files to generate blog content
+- Embedding components inside Markdown with `MDX`
+- Using the `<Image />` component for optimization
+- Organizing layout components for consistent page structure
+- Writing clean, responsive styles with Flexbox and `rem` units
+
 ## Technologies Used
 
 - **Astro**: A modern static site generator for building fast websites.
@@ -28,4 +39,3 @@ By building this project, I will familiarize myself with the following:
 - **Markdown**: For content creation (pages and blog posts).
 - **JavaScript (optional)**: For any dynamic functionality.
 - **Image Optimization**: Using Astro's built-in tools for efficient image loading.
-
